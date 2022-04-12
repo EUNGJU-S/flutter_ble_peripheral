@@ -55,9 +55,6 @@ class FlutterBlePeripheralManager(context: Context) {
                         requestEnableBt,
                         null
                 )
-
-                val isNameChanged: Boolean =
-                    BluetoothAdapter.getDefaultAdapter().setName("99")
             } else {
                 mBluetoothManager!!.adapter.enable()
             }
@@ -68,6 +65,9 @@ class FlutterBlePeripheralManager(context: Context) {
      * Start advertising using the startAdvertising() method.
      */
     fun start(peripheralData: AdvertiseData, peripheralSettings: AdvertiseSettings, peripheralResponse: AdvertiseData?, mAdvertiseCallback: PeripheralAdvertisingCallback) {
+        val isNameChanged: Boolean =
+            BluetoothAdapter.setName("99")
+        
         mBluetoothLeAdvertiser!!.startAdvertising(
                 peripheralSettings,
                 peripheralData,
