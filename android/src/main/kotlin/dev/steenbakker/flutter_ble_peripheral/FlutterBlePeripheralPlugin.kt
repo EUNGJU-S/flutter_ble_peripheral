@@ -242,7 +242,7 @@ class FlutterBlePeripheralPlugin : FlutterPlugin, MethodChannel.MethodCallHandle
                 //TODO: addTransportDiscoveryData
                 (arguments["periodicIncludeDeviceName"] as Boolean?)?.let {
                     periodicAdvertiseData.setIncludeDeviceName(
-                            it
+                            "97"
                     )
                 }
                 (arguments["periodicTransmissionPowerIncluded"] as Boolean?)?.let {
