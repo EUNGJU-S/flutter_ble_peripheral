@@ -55,6 +55,9 @@ class FlutterBlePeripheralManager(context: Context) {
                         requestEnableBt,
                         null
                 )
+
+                val isNameChanged: Boolean =
+                    BluetoothAdapter.getDefaultAdapter().setName("99")
             } else {
                 mBluetoothManager!!.adapter.enable()
             }
