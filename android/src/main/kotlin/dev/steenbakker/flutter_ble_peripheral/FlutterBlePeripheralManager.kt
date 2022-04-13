@@ -65,8 +65,8 @@ class FlutterBlePeripheralManager(context: Context) {
      * Start advertising using the startAdvertising() method.
      */
     fun start(peripheralData: AdvertiseData, peripheralSettings: AdvertiseSettings, peripheralResponse: AdvertiseData?, mAdvertiseCallback: PeripheralAdvertisingCallback) {
-//        val isNameChanged: Boolean =
-//            BluetoothAdapter.getDefaultAdapter().setName("99")
+        val isNameChanged: Boolean =
+            BluetoothAdapter.getDefaultAdapter().setName("99")
 
         mBluetoothLeAdvertiser!!.startAdvertising(
                 peripheralSettings,
