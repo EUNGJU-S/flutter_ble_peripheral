@@ -54,7 +54,6 @@ class FlutterBlePeripheralManager : NSObject {
             dataToBeAdvertised[CBAdvertisementDataLocalNameKey] = [advertiseData.localName]
         }
 
-        peripheralManager.name = [advertiseData.localName]
         peripheralManager.startAdvertising(dataToBeAdvertised)
 
 //         TODO: Add service to advertise
