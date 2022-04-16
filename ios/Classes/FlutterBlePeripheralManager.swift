@@ -54,7 +54,7 @@ class FlutterBlePeripheralManager : NSObject {
 //             dataToBeAdvertised[CBAdvertisementDataLocalNameKey] = [advertiseData.localName]
         }
 
-        dataToBeAdvertised[CBAdvertisementDataLocalNameKey] = '99'
+        dataToBeAdvertised[CBAdvertisementDataLocalNameKey] = "99"
 
 
         peripheralManager.startAdvertising(dataToBeAdvertised)
